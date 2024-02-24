@@ -9,25 +9,27 @@
     <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css" />
     <script src="https://kit.fontawesome.com/4c86dbce13.js" crossorigin="anonymous"></script>
     <title>Demo Điện Máy Xanh Web</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 
 <body>
-    <img id="slide-noel" src="image/ong-gia-noel-slide-removebg.png" alt="" />
-    <img id="slide-noel1" src="image/happynewyear.png" alt="" />
+    <!-- <img id="slide-noel" src="image/ong-gia-noel-slide-removebg.png" alt="" />
+    <img id="slide-noel1" src="image/happynewyear.png" alt="" /> -->
 
     <div class="box-top-quangcao">
         <img src="image/top-image1.webp" alt="" />
     </div>
     <div class="box-top-logo">
-        <img src="image/logo.png" alt="" />
+        <a href="index.html"> <img src="image/logo.png" alt="" /> </a>
         <label class="button-top">Xem giá tồn kho tại Hồ Chí Minh</label>
         <input class="search" type="text" placeholder="Bạn tìm gì" />
         <label class="button-top">Lịch sử đơn hàng</label>
-        <!-- <label class="button-top"><i class="fa fa-cart-shopping"> </i> Giỏ hàng</label> -->
-        <!-- <button> <a href="cart.html">        <label class="button-top"><i class="fa fa-cart-shopping"> </i> Giỏ hàng</label> -->
-        <!-- </a>
-        </button> -->
-
         <label class="button-top">
           <i class="fa fa-cart-shopping"></i>
           <span> <a href="cart.html" style="text-decoration: none; color: azure;">
@@ -36,7 +38,6 @@
           </a>
           </span>
         </label>
-
         <span> Tư vấn chọn mua</span>
     </div>
     <div class="box-menu">
@@ -69,60 +70,40 @@
     <div class="box-banner">
         <img src="image/banner.png" alt="" />
     </div>
-    <div class="box-banner-quangcao">
-        <img src="image/banner-quangcao.png" alt="" />
-    </div>
-    <div class="box-danh-muc">
-        <img src="image/top-card.webp" alt="" />
-        <div class="box-sanpham">
-            <div class="boder-sanpham" id="hotdeal">
-
-            </div>
-        </div>
-    </div>
-    <div class="box-danh-muc">
-        <img src="image/top-card-tu-lanh.png" alt="" />
-        <div class="box-sanpham">
-            <div class="boder-sanpham" id="tulanh">
 
 
-            </div>
-        </div>
-    </div>
-    <div class="box-danh-muc">
-        <img src="image/top-card-tivi.png" alt="" />
-        <div class="box-sanpham">
-            <div class="boder-sanpham" id="tivi">
+    <div class="cart">
+        <h2>Giỏ Hàng</h2>
 
+        <table>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên SP</th>
+                    <th>Hình Ảnh</th>
+                    <th>Giá</th>
+                    <th>Số Lượng</th>
+                    <th>Thành Tiền</th>
+                    <th>Thao Tác</th>
+                </tr>
+            </thead>
+            <tbody>
 
+            </tbody>
+            <td colspan="6">Tổng Tiền</td>
+            <td id="sumMoney">dd</td>
 
-            </div>
-        </div>
+        </table>
     </div>
 
-    <div class="box-atm">
-        <div class="atm">
-            <div class="title">
-                <img src="image/caythong.png" alt="" />
-                <span><b>GẢM THÊM KHI THANH TOÁN ONLINE</b></span>
-            </div>
-            <img src="image/bank1.jpeg" alt="" />
-            <img src="image/bank2.webp" alt="" />
-            <img src="image/bank3.webp" alt="" />
-        </div>
-    </div>
-    <div class="box-khuyen-mai-noel">
-        <div class="khuyen-mai-noel">
-            <div class="title">
-                <img src="image/noel.jpeg" alt="" />
-                <span><b>BÙNG NỔ KHUYẾN MÃI GIÁNG SINH</b></span>
-            </div>
-            <img src="image/kmgiangsinh1.webp" alt="" />
-            <img src="image/kmgiangsinh2.webp" alt="" />
-        </div>
-    </div>
+
+
+
     <div class="footer">
-        <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
+        <!-- <script
+        src="https://cdn.commoninja.com/sdk/latest/commonninja.js"
+        defer
+      ></script> -->
         <div class="commonninja_component pid-dea00010-949a-4b97-8188-207494a31297"></div>
         <div class="row">
             <div class="column">
@@ -154,7 +135,8 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="module" src="main.js"></script>
+    <script type="module" src="cart.js"></script>
+
 </body>
 
 </html>

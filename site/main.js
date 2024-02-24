@@ -113,9 +113,37 @@ productService.fetchData('http://localhost:3000/products?category=tủ%20lạnh&
 // console.log(pro_tulanh);
 //thêm vào giỏ hàng
 
-document.addEventListener('click', (e) => {
+document.addEventListener('click', async(e) => {
+
     if (e.target.classList.contains('btn_buy')) {
         const id = e.target.getAttribute('data-id');
         console.log(id)
+        const product = await productService.getDataById(id)
+        console.log(product)
+
+
+        let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+        const index = cart.findIndex(item => item.id == product.id);
+        if (index == -1) {
+            product.qty = 1
+            cart.push(product);
+
+        } else {
+            cart[index].qty += 1;
+
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        console.log(cart)
+
+
+        let qty_total = 0
+        cart.forEach(item => {
+            qty_total += item.qty
+        })
+        document.querySelector('.badge').innerHTML = qty_total;
+
+        console.log(qty_total)
     }
 })

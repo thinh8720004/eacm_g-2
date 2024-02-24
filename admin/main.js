@@ -42,9 +42,10 @@ document.querySelector('#openaddpage').onclick = function() {
 }
 
 closeAdd.onclick = function() {
-    addModal.style.display = "none";
+        addModal.style.display = "none";
 
-}
+    }
+    // thêm sản phẩm
 var hotdeal = 0;
 document.querySelector('#hotdeal').onchange = function() {
     if (this.checked) {
